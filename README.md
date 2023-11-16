@@ -519,7 +519,7 @@ return {
 
 ### `treesitter.lua`
 
-Ensures parsers not covered by the imports are installed. Taken from exmaple.lua.
+Ensures parsers not covered by the imports are installed. Taken from `exmaple.lua`.
 
 ```lua
 return {
