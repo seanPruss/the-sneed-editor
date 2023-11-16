@@ -17,15 +17,17 @@ config.
 | Keymap                                        | Action                                                              |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | `<leader>sx `                                 | Resumes last Telescope session                                      |
-| `J`, `K` in visual mode                       | Switches line with line above or below                              |
+| `J`, `K` in visual mode                       | Moves block of text up or down                                      |
 | `J` in normal mode                            | Appends line below to current line                                  |
 | `<C-d>`, `<C-u>`                              | Still jumps by half a page, but cursor is centered                  |
-| `n`                                           | Next item in search but with autoscroll                             |
+| `n`                                           | Next item in search but keeps cursor in the middle                  |
 | `<leader>p` when selecting text to paste over | Pastes without changing the paste buffer                            |
 | `<leader>y`                                   | Copies content into system clipboard                                |
 | `<leader>Y`                                   | Copies line into system clipboard in normal mode                    |
 | `<C-c>`                                       | Maps to `<Esc>` if you're used to using `<C-c>` to exit insert mode |
 | `Q`                                           | Does nothing instead of putting you in ex mode                      |
+| `<leader>rw`                                  | Replaces all instances of the word the cursor is on                 |
+| `<leader>mx`                                  | Make the current file executable                                    |
 
 ```lua
 -- Keymaps are automatically loaded on the VeryLazy event
@@ -55,6 +57,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 ```
 
 ### `lazy.lua`
