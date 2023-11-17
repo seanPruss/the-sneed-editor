@@ -9,6 +9,8 @@ the LazyVim documentation and Elijah Manor's YouTube videos. If you don't feel
 like configuring LazyVim yourself and want a kitchen sink approach to your editor  
 like I do, this might be for you.
 
+## `/config`
+
 ### `keymaps.lua`
 
 Here I have set some keymaps from my nvim-config repo, based on ThePrimeagen's  
@@ -111,6 +113,8 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 ```
+
+## `/plugins`
 
 ### `alpha.lua`
 
