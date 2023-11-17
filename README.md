@@ -544,6 +544,17 @@ return {
 }
 ```
 
+### `undotree.lua`
+
+Use UndoTree, which lets you see all undos and revert/branch.
+
+```lua
+return {
+    "mbbill/undotree",
+    vim.keymap.set("n", "<leader>t", vim.cmd.UndotreeToggle, { desc = "Toggle UndoTree" }),
+}
+```
+
 ### `vimbegood.lua`
 
 Use ThePrimeagen's plugin VimBeGood. Use the keymap `<leader>v` to launch.
