@@ -16,7 +16,6 @@ config.
 
 | Keymap                                        | Action                                                              |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| `<leader>sx `                                 | Resumes last Telescope session                                      |
 | `J`, `K` in visual mode                       | Moves block of text up or down                                      |
 | `J` in normal mode                            | Appends line below to current line                                  |
 | `<C-d>`, `<C-u>`                              | Still jumps by half a page, but cursor is centered                  |
@@ -33,12 +32,6 @@ config.
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-vim.keymap.set(
-    "n",
-    "<leader>sx",
-    require("telescope.builtin").resume,
-    { noremap = true, silent = true, desc = "Resume" }
-)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
