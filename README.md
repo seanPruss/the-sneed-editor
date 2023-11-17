@@ -26,8 +26,8 @@ config.
 | `<leader>Y`                                   | Copies line into system clipboard in normal mode                    |
 | `<C-c>`                                       | Maps to `<Esc>` if you're used to using `<C-c>` to exit insert mode |
 | `Q`                                           | Does nothing instead of putting you in ex mode                      |
-| `<leader>rw`                                  | Replaces all instances of the word the cursor is on                 |
-| `<leader>mx`                                  | Make the current file executable                                    |
+| `<leader>r`                                   | Replaces all instances of the word the cursor is on                 |
+| `<leader>m`                                   | Make the current file executable                                    |
 
 ```lua
 -- Keymaps are automatically loaded on the VeryLazy event
@@ -51,14 +51,14 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>mx", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word" })
+vim.keymap.set("n", "<leader>m", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
 ```
 
 ### `lazy.lua`
@@ -546,11 +546,11 @@ return {
 
 ### `vimbegood.lua`
 
-Use ThePrimeagen's plugin VimBeGood. Use the keymap `<leader>vbg` to launch.
+Use ThePrimeagen's plugin VimBeGood. Use the keymap `<leader>v` to launch.
 
 ```lua
 return {
     "theprimeagen/vim-be-good",
-    vim.keymap.set("n", "<leader>vbg", vim.cmd.VimBeGood, { desc = "Launch VimBeGood" }),
+    vim.keymap.set("n", "<leader>v", vim.cmd.VimBeGood, { desc = "Launch VimBeGood" }),
 }
 ```
