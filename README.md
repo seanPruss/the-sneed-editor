@@ -428,23 +428,12 @@ return {
 }
 ```
 
-### `lsp.lua`
+### `autocomplete.lua`
 
-Ensures html and css language servers are installed, and is set up to use  
-the tab key for autocomplete, which I took from `example.lua`.
+Scroll through autocomplete options with tab. Taken from `example.lua`.
 
 ```lua
 return {
-    {
-        "neovim/nvim-lspconfig",
-        opts = {
-            servers = {
-                cssls = {},
-                html = {},
-            },
-        },
-    },
-
     -- Use <tab> for completion and snippets (supertab)
     -- first: disable default <tab> and <s-tab> behavior in LuaSnip
     {
@@ -524,19 +513,22 @@ Ensures parsers not covered by the imports are installed. Taken from `exmaple.lu
 
 ```lua
 return {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-        ensure_installed = {
-            "bash",
-            "css",
-            "html",
-            "javascript",
-            "lua",
-            "query",
-            "regex",
-            "vim",
-            "yaml",
-        },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = function(_, opts)
+            -- add tsx and treesitter
+            vim.list_extend(opts.ensure_installed, {
+                "bash",
+                "css",
+                "html",
+                "javascript",
+                "lua",
+                "query",
+                "regex",
+                "vim",
+                "yaml",
+            })
+        end,
     },
 }
 ```
