@@ -23,8 +23,6 @@ config.
 | `<C-d>`, `<C-u>`                              | Still jumps by half a page, but cursor is centered                  |
 | `n`                                           | Next item in search but keeps cursor in the middle                  |
 | `<leader>p` when selecting text to paste over | Pastes without changing the paste buffer                            |
-| `<leader>y`                                   | Copies content into system clipboard                                |
-| `<leader>Y`                                   | Copies line into system clipboard in normal mode                    |
 | `<C-c>`                                       | Maps to `<Esc>` if you're used to using `<C-c>` to exit insert mode |
 | `Q`                                           | Does nothing instead of putting you in ex mode                      |
 | `<leader>r`                                   | Replaces all instances of the word the cursor is on                 |
@@ -45,9 +43,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
