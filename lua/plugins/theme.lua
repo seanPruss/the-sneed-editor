@@ -1,11 +1,11 @@
 return {
 
-    { "dylanaraps/wal.vim" },
+    { "sainnhe/sonokai" },
 
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "wal",
+            colorscheme = "sonokai",
         },
     },
 }

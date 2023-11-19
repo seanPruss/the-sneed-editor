@@ -212,17 +212,17 @@ return {
 
 ### `theme.lua`
 
-Use the wal.vim theme which matches nvim colours to your terminal.
+My theme of choice is sonokai.
 
 ```lua
 return {
 
-    { "dylanaraps/wal.vim" },
+    { "sainnhe/sonokai" },
 
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "wal",
+            colorscheme = "sonokai",
         },
     },
 }
