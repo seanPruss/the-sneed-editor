@@ -1,11 +1,11 @@
 return {
 
-    { "sainnhe/sonokai" },
+    { "AlphaTechnolog/pywal.nvim" },
 
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "sonokai",
+            colorscheme = "pywal",
         },
     },
 }
