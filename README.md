@@ -72,6 +72,7 @@ Imported alpha so I could use alpha for the logo instead of dashboard
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.markdown" },
         { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+        { import = "lazyvim.plugins.extras.editor.leap" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         { import = "lazyvim.plugins.extras.util.dot" },
 ```
@@ -210,6 +211,23 @@ return {
 }
 ```
 
+### `oil.lua`
+
+Opens a file explorer where you can add, rename, and delete files like lines in  
+a vim buffer.
+
+```lua
+return {
+    "stevearc/oil.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    keys = {
+        { "-", "<cmd>Oil<CR>" },
+    },
+}
+```
+
 ### `theme.lua`
 
 Uses the pywal.nvim theme, which matches nvim's colours to your terminal.
@@ -228,32 +246,6 @@ return {
 }
 ```
 
-### `treesitter.lua`
-
-Ensures parsers not covered by the imports are installed.
-
-```lua
-return {
-    {
-        "nvim-treesitter/nvim-treesitter",
-        opts = function(_, opts)
-            -- add tsx and treesitter
-            vim.list_extend(opts.ensure_installed, {
-                "bash",
-                "css",
-                "html",
-                "javascript",
-                "lua",
-                "query",
-                "regex",
-                "vim",
-                "yaml",
-            })
-        end,
-    },
-}
-```
-
 ### `undotree.lua`
 
 Use UndoTree, which lets you see all undos and revert/branch.
@@ -261,7 +253,9 @@ Use UndoTree, which lets you see all undos and revert/branch.
 ```lua
 return {
     "mbbill/undotree",
-    vim.keymap.set("n", "<leader>t", vim.cmd.UndotreeToggle, { desc = "Toggle UndoTree" }),
+    keys = {
+        { "<leader>t", "<cmd>UndotreeToggle<CR>" },
+    },
 }
 ```
 
@@ -272,6 +266,8 @@ Use ThePrimeagen's plugin VimBeGood. Use the keymap `<leader>v` to launch.
 ```lua
 return {
     "theprimeagen/vim-be-good",
-    vim.keymap.set("n", "<leader>v", vim.cmd.VimBeGood, { desc = "Launch VimBeGood" }),
+    keys = {
+        { "<leader>v", "<cmd>VimBeGood<CR>" },
+    },
 }
 ```
