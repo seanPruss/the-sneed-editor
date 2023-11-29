@@ -272,7 +272,7 @@ Use UndoTree, which lets you see all undos and revert/branch.
 return {
     "mbbill/undotree",
     keys = {
-        { "<leader>t", "<cmd>UndotreeToggle<CR>" },
+        { "<leader>t", "<cmd>UndotreeToggle<CR>", desc = "Toggle UndoTree" },
     },
 }
 ```
@@ -285,7 +285,7 @@ Use ThePrimeagen's plugin VimBeGood. Use the keymap `<leader>v` to launch.
 return {
     "theprimeagen/vim-be-good",
     keys = {
-        { "<leader>v", "<cmd>VimBeGood<CR>" },
+        { "<leader>v", "<cmd>VimBeGood<CR>", desc = "Launch VimBeGood" },
     },
 }
 ```
