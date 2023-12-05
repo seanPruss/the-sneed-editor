@@ -18,7 +18,6 @@ config.
 
 | Keymap                                        | Action                                                              |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| `J`, `K` in visual mode                       | Moves block of text up or down                                      |
 | `J` in normal mode                            | Appends line below to current line                                  |
 | `<C-d>`, `<C-u>`                              | Still jumps by half a page, but cursor is centered                  |
 | `n`                                           | Next item in search but keeps cursor in the middle                  |
@@ -32,8 +31,6 @@ config.
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
