@@ -1,11 +1,43 @@
 return {
     "theprimeagen/harpoon",
     keys = {
-        { "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<CR>", desc = "Add to Harpoon list" },
-        { "<leader>h", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Show Harpoon list" },
-        { "<C-y>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>" },
-        { "<C-i>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>" },
-        { "<C-o>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>" },
-        { "<C-p>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>" },
+        {
+            "<leader>a",
+            function()
+                require("harpoon.mark").add_file()
+            end,
+            desc = "Add to Harpoon list",
+        },
+        {
+            "<leader>h",
+            function()
+                require("harpoon.ui").toggle_quick_menu()
+            end,
+            desc = "Show Harpoon list",
+        },
+        {
+            "<C-h>",
+            function()
+                require("harpoon.ui").nav_file(1)
+            end,
+        },
+        {
+            "<C-j>",
+            function()
+                require("harpoon.ui").nav_file(2)
+            end,
+        },
+        {
+            "<C-k>",
+            function()
+                require("harpoon.ui").nav_file(3)
+            end,
+        },
+        {
+            "<C-l>",
+            function()
+                require("harpoon.ui").nav_file(4)
+            end,
+        },
     },
 }
