@@ -280,17 +280,16 @@ return {
 
 ### `theme.lua`
 
-Uses the pywal.nvim theme, which matches nvim's colours to your terminal.
+Uses TokyoNight with transparent background
 
 ```lua
 return {
-
-    { "AlphaTechnolog/pywal.nvim" },
-
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "pywal",
+    "folke/tokyonight.nvim",
+    opts = {
+        transparent = true,
+        styles = {
+            sidebars = "transparent",
+            floats = "transparent",
         },
     },
 }
