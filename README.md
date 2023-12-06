@@ -1,7 +1,5 @@
 # The Sneed Editor
 
-![The Sneed Editor.](./TheSneedEditor.png)
-
 ## My config of [LazyVim](https://github.com/LazyVim/LazyVim).
 
 The sneed editor is nothing special. You could just as easily make it following  
