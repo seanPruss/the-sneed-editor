@@ -206,6 +206,21 @@ return {
 }
 ```
 
+### hardtime.lua
+
+Stops you from using bad habits like hjkl when you could do relative jumping  
+and more.
+
+```lua
+return {
+    "m4xshen/hardtime.nvim",
+    event = "BufEnter",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    opts = {},
+    disabled_filetypes = { "qf", "netrw", "neotree", "lazy", "mason", "oil" },
+}
+```
+
 ### `harpoon.lua`
 
 Quick navigation for frequently used files.
