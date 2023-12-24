@@ -1,42 +1,58 @@
+local harpoon = require("harpoon")
 return {
     "theprimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = {},
     keys = {
         {
             "<leader>a",
             function()
-                require("harpoon.mark").add_file()
+                harpoon:list():append()
             end,
             desc = "Add to Harpoon list",
         },
         {
             "<leader>h",
             function()
-                require("harpoon.ui").toggle_quick_menu()
+                harpoon.ui:toggle_quick_menu(harpoon:list())
             end,
             desc = "Show Harpoon list",
         },
         {
             "<C-h>",
             function()
-                require("harpoon.ui").nav_file(1)
+                harpoon:list():select(1)
             end,
         },
         {
             "<C-j>",
             function()
-                require("harpoon.ui").nav_file(2)
+                harpoon:list():select(2)
             end,
         },
         {
             "<C-k>",
             function()
-                require("harpoon.ui").nav_file(3)
+                harpoon:list():select(3)
             end,
         },
         {
             "<C-l>",
             function()
-                require("harpoon.ui").nav_file(4)
+                harpoon:list():select(4)
+            end,
+        },
+        {
+            "<C-S-P>",
+            function()
+                harpoon:list():prev()
+            end,
+        },
+        {
+            "<C-S-N>",
+            function()
+                harpoon:list():next()
             end,
         },
     },
