@@ -206,7 +206,7 @@ return {
 }
 ```
 
-### hardtime.lua
+### `hardtime.lua`
 
 Stops you from using bad habits like hjkl when you could do relative jumping  
 and more.
