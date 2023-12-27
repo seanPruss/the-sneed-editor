@@ -240,18 +240,18 @@ return {
     opts = {},
     keys = {
         {
-            "<leader>a",
+            "<leader>ha",
             function()
                 require("harpoon"):list():append()
             end,
-            desc = "Add to Harpoon list",
+            desc = "Append",
         },
         {
-            "<leader>h",
+            "<leader>hl",
             function()
                 require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
             end,
-            desc = "Show Harpoon list",
+            desc = "List",
         },
         {
             "<C-h>",
@@ -335,7 +335,7 @@ Use UndoTree, which lets you see all undos and revert/branch.
 return {
     "mbbill/undotree",
     keys = {
-        { "<leader>t", "<cmd>UndotreeToggle<CR>", desc = "Toggle UndoTree" },
+        { "<leader>ct", "<cmd>UndotreeToggle<CR>", desc = "UndoTree" },
     },
 }
 ```
@@ -350,5 +350,21 @@ return {
     keys = {
         { "<leader>v", "<cmd>VimBeGood<CR>", desc = "Launch VimBeGood" },
     },
+}
+```
+
+### `whichkey.lua`
+
+Add a harpoon category to whichkey.
+
+```lua
+return {
+  "folke/which-key.nvim",
+  optional = true,
+  opts = {
+    defaults = {
+      ["<leader>h"] = { name = "+harpoon" },
+    },
+  },
 }
 ```

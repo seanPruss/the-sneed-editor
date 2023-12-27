@@ -5,18 +5,18 @@ return {
     opts = {},
     keys = {
         {
-            "<leader>a",
+            "<leader>ha",
             function()
                 require("harpoon"):list():append()
             end,
-            desc = "Add to Harpoon list",
+            desc = "Append",
         },
         {
-            "<leader>h",
+            "<leader>hl",
             function()
                 require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
             end,
-            desc = "Show Harpoon list",
+            desc = "List",
         },
         {
             "<C-h>",
