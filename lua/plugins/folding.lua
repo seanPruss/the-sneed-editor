@@ -50,9 +50,12 @@ return {
             {
                 "zk",
                 function()
-                    require("ufo").goPreviousClosedFold()
+                    local winid = require("ufo").peekFoldedLinesUnderCursor()
+                    if not winid then
+                        vim.lsp.buf.hover()
+                    end
                 end,
-                desc = " 󱃄 Goto Prev Fold",
+                desc = "Peek Fold",
             },
             {
                 "zj",
