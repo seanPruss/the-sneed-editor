@@ -213,7 +213,7 @@ return {
 }
 ```
 
-`folding.lua`
+### `folding.lua`
 
 Plugins for code folding.
 
@@ -446,16 +446,22 @@ return {
 
 ### `theme.lua`
 
-Uses TokyoNight with transparent background
+Uses rose-pine theme with a transparent background
 
 ```lua
 return {
-    "folke/tokyonight.nvim",
-    opts = {
-        transparent = true,
-        styles = {
-            sidebars = "transparent",
-            floats = "transparent",
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        opts = {
+            disable_background = true,
+        },
+    },
+
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "rose-pine",
         },
     },
 }
