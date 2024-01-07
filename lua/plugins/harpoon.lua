@@ -25,13 +25,13 @@ return {
             end,
         },
         {
-            "<C-j>",
+            "<C-f>",
             function()
                 require("harpoon"):list():select(2)
             end,
         },
         {
-            "<C-k>",
+            "<C-s>",
             function()
                 require("harpoon"):list():select(3)
             end,
