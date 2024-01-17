@@ -25,7 +25,7 @@ return {
             end,
         },
         {
-            "<C-f>",
+            "<C-p>",
             function()
                 require("harpoon"):list():select(2)
             end,
