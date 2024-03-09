@@ -19,3 +19,5 @@ vim.keymap.set("n", "<leader>m", "<cmd>!chmod +x %<CR>", { silent = true, desc =
 vim.keymap.set("n", "<leader>;", "A;", { desc = "Add semicolon" })
 vim.keymap.set("n", "<leader>[", "A {<CR><CR>}<Esc>kcc", { desc = "Create squirly braces" })
 vim.keymap.set("n", "<C-;>", "A:<Esc>o")
+vim.keymap.set("n", "j", "jzz")
+vim.keymap.set("n", "k", "kzz")
