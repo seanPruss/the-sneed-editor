@@ -18,3 +18,8 @@ vim.keymap.set("n", "<leader>[", "A {<CR><CR>}<Esc>kcc", { desc = "Create squirl
 vim.keymap.set("n", "<C-;>", "A:<Esc>o")
 vim.keymap.set("n", "j", "jzz")
 vim.keymap.set("n", "k", "kzz")
+vim.keymap.set(
+    "n",
+    "<leader>k",
+    [[i<!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"><CR><meta name="viewport" content="width=device-width, initial-scale=1"><CR><title>Document</title><CR></head><CR><body><CR><CR></body><CR></html><Esc>kkcc]]
+)
