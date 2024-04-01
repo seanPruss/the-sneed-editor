@@ -25,3 +25,4 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.foldcolumn = "1"
 vim.opt.foldenable = true
+vim.g.lazyvim_python_lsp = "basedpyright"
