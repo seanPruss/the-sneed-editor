@@ -26,3 +26,11 @@ vim.keymap.set(
     [[i<!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"><CR><meta name="viewport" content="width=device-width, initial-scale=1"><CR><title>Document</title><CR></head><CR><body><CR><CR></body><CR></html><Esc>kkcc]]
 )
 vim.keymap.set("n", "<C-s>", "<nop>")
+vim.keymap.set("i", "<Up>", "<nop>")
+vim.keymap.set("n", "<Up>", "<nop>")
+vim.keymap.set("i", "<Down>", "<nop>")
+vim.keymap.set("n", "<Down>", "<nop>")
+vim.keymap.set("i", "<Right>", "<nop>")
+vim.keymap.set("n", "<Right>", "<nop>")
+vim.keymap.set("i", "<Left>", "<nop>")
+vim.keymap.set("n", "<Left>", "<nop>")
