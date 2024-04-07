@@ -20,6 +20,7 @@ vim.keymap.set("n", "j", "jzz")
 vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<CR>", "<CR>zz")
 vim.keymap.set("n", "-", "-zz")
+vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set(
     "n",
     "<leader>k",
